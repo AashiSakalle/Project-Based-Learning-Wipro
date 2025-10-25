@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           elementFormDefault="qualified">
+
+    <!-- 1. Define the reusable ComplexType for Student Details -->
+    <xs:complexType name="StudentDetails">
+        <xs:sequence>
+            <xs:element name="firstname" type="xs:string"/>
+            <xs:element name="lastname" type="xs:string"/>
+            <xs:element name="division" type="xs:string"/>
+            <xs:element name="marks" type="xs:positiveInteger"/>
+        </xs:sequence>
+        <xs:attribute name="rollno" type="xs:positiveInteger"/>
+    </xs:complexType>
+
+    <!-- 2. Define the root element 'classroom' -->
+    <xs:element name="classroom">
+        <xs:complexType>
+            <xs:sequence>
+                <!-- 'student' elements use the defined 'StudentDetails' type -->
+                <xs:element name="student" type="StudentDetails" minOccurs="0" maxOccurs="unbounded"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+</xs:schema>

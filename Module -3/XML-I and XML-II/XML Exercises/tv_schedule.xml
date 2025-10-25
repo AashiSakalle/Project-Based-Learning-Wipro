@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE TVSCHEDULE SYSTEM "tv_schedule.dtd">
+<TVSCHEDULE NAME="Daily TV Listings" DATE="14-OCT-2025">
+
+    <CHANNEL CHAN="CH101">
+        <BANNER>Channel One - Movies</BANNER>
+        <DATE DAY="MON">
+            <PROGRAMSLOT TITLE="Morning Show" RATING="G">
+                <TIME>08:00 AM</TIME>
+                <DESCRIPTION>Daily news and interviews.</DESCRIPTION>
+            </PROGRAMSLOT>
+            <PROGRAMSLOT TITLE="Action Movie" RATING="PG">
+                <TIME>10:00 AM</TIME>
+                <DESCRIPTION>A classic 90s action film.</DESCRIPTION>
+            </PROGRAMSLOT>
+        </DATE>
+        <DATE DAY="TUE">
+            <PROGRAMSLOT TITLE="Comedy Hour" RATING="PG13">
+                <TIME>07:00 PM</TIME>
+                <DESCRIPTION>Stand-up comedy special.</DESCRIPTION>
+            </PROGRAMSLOT>
+        </DATE>
+        <HOLIDAY PROGRAMSLOT="3"/>
+    </CHANNEL>
+
+    <CHANNEL CHAN="CH102">
+        <BANNER>Channel Two - News</BANNER>
+        <DATE DAY="MON">
+            <PROGRAMSLOT TITLE="World News Update" RATING="G">
+                <TIME>06:00 PM</TIME>
+                <DESCRIPTION>Latest headlines from around the globe.</DESCRIPTION>
+            </PROGRAMSLOT>
+        </DATE>
+        <HOLIDAY PROGRAMSLOT="1"/>
+    </CHANNEL>
+
+</TVSCHEDULE>

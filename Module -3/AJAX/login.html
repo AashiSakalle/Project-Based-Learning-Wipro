@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>User Login - XYZ Library</title>
+    <style>
+        body { font-family: Arial, sans-serif; }
+        .container { width: 400px; margin: 50px auto; padding: 20px; border: 1px solid #ccc; border-radius: 5px; }
+        input[type="text"], input[type="password"] { width: 100%; padding: 8px; margin-bottom: 10px; border: 1px solid #ddd; box-sizing: border-box; }
+        .error { color: red; font-weight: bold; margin-bottom: 15px; }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <div id="login_error_msg" class="error" style="display:none;"></div>
+    <h2>User Login</h2>
+    <form id="loginForm">
+        <label for="login_email">Email:</label>
+        <input type="text" id="login_email" name="email" required>
+
+        <label for="login_password">Password:</label>
+        <input type="password" id="login_password" name="password" required>
+        
+        <button type="submit">Login</button>
+    </form>
+    <p>New user? <a href="register.html">Register here</a></p>
+</div>
+
+<script>
+    // --- Login Logic to demonstrate requirement (c) error display ---
+    document.getElementById('loginForm').addEventListener('submit', function(event) {
+        event.preventDefault(); 
+        
+        var formData = new FormData(this);
+        var msgDiv = document.getElementById('login_error_msg');
+        
+        var xhr = new XMLHttpRequest();
+        // Assuming a server-side script 'login_user.php' handles authentication
+        xhr.open('POST', 'login_user.php', true);
+        
+        xhr.onload = function() {
+            if (xhr.status === 200) {
+                var response = JSON.parse(xhr.responseText);
+
+                if (response.success) {
+                    // Requirement c: Redirect to home page on success
+                    window.location.href = 'home.html'; // Assume 'home.html' is the home page
+                } else {
+                    // Requirement c: Display 'Invalid Credentials' on error
+                    msgDiv.textContent = 'Invalid Credentials';
+                    msgDiv.style.display = 'block';
+                }
+            }
+        };
+        xhr.send(formData);
+    });
+</script>
+
+</body>
+</html>

@@ -1,0 +1,195 @@
+/* General Styling */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    background-color: #f4f4f4;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 10px;
+    background-color: white;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+    text-align: center;
+    color: #333;
+    margin-top: 30px;
+}
+
+/* 1. First Row: Promotion Header */
+.promotion-row {
+    /* First row should have all columns joined to show current promotion */
+    background: linear-gradient(to right, #4b0082, #800080); /* Purple/Indigo background */
+    padding: 20px;
+    color: white;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.promotion-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    max-width: 100%;
+}
+
+.promotion-content p {
+    /* Using the right typography align the content to the center */
+    font-size: 1.5em;
+    font-weight: bold;
+    margin: 0 20px;
+    text-align: center;
+}
+
+.caps {
+    /* First letters in Caps of the string message header */
+    font-size: 1.5em;
+    line-height: 1;
+}
+
+.highlight {
+    /* All in lower case for the string message */
+    text-transform: lowercase;
+    display: block; /* Ensures it's on a new line or styled distinctly */
+    font-size: 0.8em;
+    font-weight: normal;
+}
+
+.round-logo {
+    /* Add an image as a logo along with the message where the logo is displayed as a round image. */
+    width: 60px;
+    height: 60px;
+    border-radius: 50%; /* Round image */
+    object-fit: cover;
+    margin-right: 15px;
+    border: 3px solid white;
+}
+
+.banner-image {
+    /* Placeholder for the secondary banner image */
+    width: 150px;
+    height: auto;
+    border-radius: 5px;
+    margin-left: 15px;
+}
+
+/* 2. Second Row: Action Buttons */
+.action-row {
+    /* Second row should have search, download, print and favorite buttons */
+    display: flex;
+    justify-content: space-around;
+    padding: 10px 0;
+    border-bottom: 1px solid #ccc;
+    margin-bottom: 30px;
+}
+
+.action-button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 1em;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    transition: background-color 0.3s;
+}
+
+.action-button:hover {
+    background-color: #0056b3;
+}
+
+/* 3. Third Row onwards: Book Grid */
+.book-grid {
+    /* Break up grid with each column representing a book with minimum 2 rows of book details */
+    display: grid;
+    grid-template-columns: repeat(6, 1fr); /* 6 column table break up grid */
+    gap: 20px;
+}
+
+.book-item {
+    text-align: center;
+    padding: 10px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    /* Soft edge rectangle shape (achieved with border-radius) */
+    border-radius: 8px; 
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+}
+
+.book-image-container {
+    overflow: hidden;
+    margin-bottom: 10px;
+}
+
+.book-item img {
+    /* Image of book with soft edge rectangle shape */
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 5px; /* Soft edge rectangle on the image */
+}
+
+.book-title {
+    /* Title of the book... center aligned */
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 5px;
+    text-align: center;
+    /* In next line center aligned */
+    white-space: nowrap; 
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.book-author {
+    /* ...and author in next line center aligned */
+    font-size: 0.9em;
+    color: #666;
+    text-align: center;
+}
+
+/* Responsive adjustment for smaller screens */
+@media (max-width: 1024px) {
+    .book-grid {
+        grid-template-columns: repeat(4, 1fr); /* 4 columns on medium screens */
+    }
+}
+
+@media (max-width: 768px) {
+    .book-grid {
+        grid-template-columns: repeat(3, 1fr); /* 3 columns on tablets */
+    }
+    .promotion-content {
+        flex-direction: column;
+    }
+    .promotion-content p {
+        margin: 10px 0;
+    }
+    .banner-image {
+        display: none; /* Hide for very small screens */
+    }
+}
+
+@media (max-width: 480px) {
+    .book-grid {
+        grid-template-columns: repeat(2, 1fr); /* 2 columns on phones */
+    }
+    .action-row {
+        flex-direction: column;
+        gap: 10px;
+    }
+    .action-button {
+        width: 100%;
+    }
+}

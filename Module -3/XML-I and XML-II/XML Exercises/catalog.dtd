@@ -1,0 +1,25 @@
+<!ELEMENT catalog (product+)>
+<!ELEMENT product (catalog_item+)>
+<!ATTLIST product 
+    description CDATA #REQUIRED
+    product_image CDATA #REQUIRED
+>
+
+<!ELEMENT catalog_item (item_number, price, size+, color_swatch*)>
+<!ATTLIST catalog_item 
+    gender (Men's | Women's) #REQUIRED
+>
+
+<!ELEMENT item_number (#PCDATA)>
+<!ELEMENT price (#PCDATA)>
+
+<!ELEMENT size (color_swatch+)>
+<!ATTLIST size 
+    description CDATA #REQUIRED
+>
+
+<!ELEMENT color_swatch EMPTY>
+<!ATTLIST color_swatch 
+    image CDATA #REQUIRED
+    color CDATA #REQUIRED
+>

@@ -1,0 +1,20 @@
+<FlowerDepot>
+  <Flower>
+    <Name>Rose</Name>
+    <Color>Red</Color>
+    <Price>10</Price>
+    <Availability>Yes</Availability>
+  </Flower>
+  <Flower>
+    <Name>Carnation</Name>
+    <Color>Yellow</Color>
+    <Price>15</Price>
+    <Availability>Yes</Availability>
+  </Flower>
+  <Flower>
+    <Name>lilly</Name>
+    <Color>white</Color>
+    <Price>11</Price>
+    <Availability>No</Availability>
+  </Flower>
+</FlowerDepot>

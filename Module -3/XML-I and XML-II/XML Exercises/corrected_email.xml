@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<message>
+    <email>
+        <header>
+            <sender>me@wipro.com</sender>
+            <recipient>you@wipro.com</recipient>
+        </header>
+        <subject>Re: XML</subject>
+        <text>I'm working on XML now.</text>
+    </email>
+</message>

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>AP Auctions - Enter Bid</title>
+    <style>
+        body { font-family: Arial, sans-serif; }
+        .container { 
+            width: 400px; 
+            margin: 50px auto; 
+            padding: 20px; 
+            border: 1px solid #ccc; 
+            box-shadow: 2px 2px 5px rgba(0,0,0,0.1); 
+        }
+        label { 
+            display: block; 
+            margin-top: 10px; 
+        }
+        input[type="text"], input[type="email"], input[type="number"] {
+            width: 100%;
+            padding: 8px;
+            margin-top: 5px;
+            box-sizing: border-box;
+        }
+        .form-row { 
+            display: flex; 
+            justify-content: space-between; 
+            align-items: center; 
+            margin-bottom: 15px; 
+        }
+        .form-row label { 
+            flex-basis: 40%; 
+            margin: 0;
+            display: inline;
+        }
+        .form-row input[type="text"], 
+        .form-row input[type="email"], 
+        .form-row input[type="number"] { 
+            flex-basis: 55%; 
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h2>Welcome to AP Auctions. Please Enter Bid.</h2>
+    <form action="BidServlet" method="post">
+        
+        <div class="form-row">
+            <label for="itemId">Item ID:</label>
+            <input type="text" id="itemId" name="itemId" required>
+        </div>
+
+        <div class="form-row">
+            <label for="itemName">Item Name:</label>
+            <input type="text" id="itemName" name="itemName" required>
+        </div>
+
+        <div class="form-row">
+            <label for="yourName">Your Name:</label>
+            <input type="text" id="yourName" name="yourName" required>
+        </div>
+        
+        <div class="form-row">
+            <label for="emailAddress">Your Email Address:</label>
+            <input type="email" id="emailAddress" name="emailAddress" required>
+        </div>
+
+        <div class="form-row">
+            <label for="amountBid">Amount Bid:</label>
+            <input type="number" id="amountBid" name="amountBid" min="1" required>
+        </div>
+
+        <div style="margin-bottom: 20px;">
+            <input type="checkbox" id="autoIncrement" name="autoIncrement" value="true">
+            <label for="autoIncrement" style="display: inline;">Auto-increment bid to match other bidders?</label>
+        </div>
+        
+        <button type="submit" name="SubmitBid">Submit Bid</button>
+    </form>
+</div>
+
+</body>
+</html>

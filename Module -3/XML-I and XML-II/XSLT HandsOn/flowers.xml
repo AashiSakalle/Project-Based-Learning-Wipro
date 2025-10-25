@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="flower_filter_sort.xsl"?>
+
+<FlowerDepot>
+  <Flower>
+    <Name>Rose</Name>
+    <Color>Red</Color>
+    <Price>10</Price>
+    <Availability>Yes</Availability>
+  </Flower>
+  <Flower>
+    <Name>Carnation</Name>
+    <Color>Yellow</Color>
+    <Price>15</Price>
+    <Availability>Yes</Availability>
+  </Flower>
+  <Flower>
+    <Name>lilly</Name>
+    <Color>white</Color>
+    <Price>11</Price>
+    <Availability>No</Availability>
+  </Flower>
+</FlowerDepot>

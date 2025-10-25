@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Define two distinct namespaces: 'mobile' and 'landline' -->
+<PhoneCatalog xmlns:mobile="http://example.com/mobile"
+              xmlns:landline="http://example.com/landline">
+
+    <!-- Mobile Phone (using the 'mobile' prefix) -->
+    <mobile:Phone>
+        <mobile:name>Moto E</mobile:name>
+        <mobile:ModelNo>123</mobile:ModelNo>
+        <mobile:Processor>Qualcomm Snapdragon 200</mobile:Processor>
+        <mobile:Battery>2390 mAh</mobile:Battery>
+    </mobile:Phone>
+
+    <!-- Landline Phone (using the 'landline' prefix) -->
+    <landline:Phone>
+        <landline:name>Beetel M71 Landline</landline:name>
+        <landline:ModelNo>456</landline:ModelNo>
+        <landline:Display>LCD Screen</landline:Display>
+        <landline:Corded>Yes</landline:Corded>
+    </landline:Phone>
+
+</PhoneCatalog>

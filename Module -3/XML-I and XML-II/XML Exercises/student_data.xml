@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Define two namespaces: 'marks' for grades and 'personal' for identity -->
+<Students xmlns:marks="http://example.com/marks_data"
+          xmlns:personal="http://example.com/personal_data">
+
+    <!-- Student 1: Marks Data -->
+    <marks:Student-Root>
+        <marks:StudentID>S1001</marks:StudentID>
+        <marks:TheoryMarks>85</marks:TheoryMarks>
+        <marks:PracticalMarks>92</marks:PracticalMarks>
+        <marks:TotalMarks>177</marks:TotalMarks>
+        <marks:Grade>A</marks:Grade>
+    </marks:Student-Root>
+
+    <!-- Student 1: Personal Data (using the same StudentID) -->
+    <personal:Student-Root>
+        <personal:StudentID>S1001</personal:StudentID>
+        <personal:Name>John Doe</personal:Name>
+        <personal:DOB>2005-01-15</personal:DOB>
+        <personal:Gender>Male</personal:Gender>
+        <personal:Course>Physics</personal:Course>
+    </personal:Student-Root>
+
+</Students>
